@@ -32,4 +32,11 @@ class User extends Authenticatable
         return $this->hasMany(Micropost::class);
     }
     
+    public function feed_microposts()
+    {
+        $all_user_ids = $this-> pluck('users.id')-> toArray();
+        $all_user_ids[] = $this->id;
+        return Micropost::whereIn('user_id', $all_user_ids);
+    }
+    
 }
