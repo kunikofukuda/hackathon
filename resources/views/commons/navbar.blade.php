@@ -15,6 +15,10 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     @if (Auth::check())
+                    
+                    <span>
+                            <a href="{{route('users.edit', ['id'=> Auth::User()->id] )}}" class="glyphicon glyphicon-home" style='font-size:24pt; margin-left: 15px; margin-top: 10px; color: white;'></a>
+                        </span>
 
                         <span>
                             <a href="/" class="glyphicon glyphicon-list" style='font-size:22pt; margin-left: 15px; margin-top: 10px; color: white;'></a>
@@ -24,6 +28,7 @@
                             <a href="{{route('users.show', ['id'=> Auth::User()->id] )}}" class="glyphicon glyphicon-home" style='font-size:24pt; margin-left: 15px; margin-top: 10px; color: white;'></a>
                         </span>
                        
+                      
                         
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ Auth::user()->nickname }} <span class="caret"></span></a>
