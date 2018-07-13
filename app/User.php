@@ -39,4 +39,9 @@ class User extends Authenticatable
         return Micropost::whereIn('user_id', $all_user_ids);
     }
     
+     public function dates()
+    {
+        return $this->hasMany(Date::class);
+    }
+    
 }

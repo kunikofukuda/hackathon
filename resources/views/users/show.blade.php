@@ -53,9 +53,7 @@
             margin-right: 20px;
         }
     </style>
-    <!DOCTYPE html>
-<html>
-<head>
+
 
 <style>
 * {box-sizing: border-box;}
@@ -142,15 +140,13 @@ body {font-family: Verdana, sans-serif;}
 
 }
 </style>
-</head>
-<body>
 
 
+ {!! Form::model($date, ['route' => ['profiles.store', $date->id], 'method' => 'post']) !!}
 
 <div class="month">      
   <ul>
-    <li class="prev">&#10094;</li>
-    <li class="next">&#10095;</li>
+   
     <li>
       July<br>
       <span style="font-size:18px">2018</span>
@@ -425,8 +421,7 @@ body {font-family: Verdana, sans-serif;}
 
 <div class="month">      
   <ul>
-    <li class="prev">&#10094;</li>
-    <li class="next">&#10095;</li>
+    
     <li>
       August<br>
       <span style="font-size:18px">2018</span>
@@ -619,7 +614,8 @@ body {font-family: Verdana, sans-serif;}
 <div style="margin-bottom:100px"></div>
 
 <div class="button">
-{!! Form::submit('Upload', ['class' => "btn btn-danger btn-block"]) !!}
+ {!! Form::submit('Upload') !!}
+    {!! Form::close() !!}
 </div>
 <style>
 .button {

@@ -149,8 +149,7 @@ body {font-family: Verdana, sans-serif;}
 
 <div class="month">      
   <ul>
-    <li class="prev">&#10094;</li>
-    <li class="next">&#10095;</li>
+
     <li>
       July<br>
       <span style="font-size:18px">2018</span>
@@ -172,7 +171,7 @@ body {font-family: Verdana, sans-serif;}
   <li>1
   <select name="pref_id">
   <option selected="selected" value=""> </option>
-    <option value="701">HIMA</option>
+    <value="701">HIMA</option>
 　</select>
   </li>
   <li>2
@@ -425,8 +424,7 @@ body {font-family: Verdana, sans-serif;}
 
 <div class="month">      
   <ul>
-    <li class="prev">&#10094;</li>
-    <li class="next">&#10095;</li>
+  
     <li>
       August<br>
       <span style="font-size:18px">2018</span>
@@ -619,7 +617,7 @@ body {font-family: Verdana, sans-serif;}
 <div style="margin-bottom:100px"></div>
 
 <div class="button">
-{!! Form::submit('Upload', ['class' => "btn btn-danger btn-block"]) !!}
+ <a href="{{route('profiles.store', ['id'=> Auth::User()->id] )}}"{!! Form::submit('Upload', ['class' => "btn btn-danger btn-block"]) !!}Upload</a>
 </div>
 <style>
 .button {
