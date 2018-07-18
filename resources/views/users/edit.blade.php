@@ -1,7 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-   
+
+ <!DOCTYPE html>
+<html>
+
         <aside class="col-xs-4">
             <div class="panel panel-default">
                 <div class="panel-heading">
@@ -53,11 +56,13 @@
             margin-right: 20px;
         }
     </style>
-    <!DOCTYPE html>
-<html>
-<head>
+    
+    
+    
+  
+  <head>
 
-<style>
+    <style>
 * {box-sizing: border-box;}
 ul {list-style-type: none;}
 body {font-family: Verdana, sans-serif;}
@@ -141,11 +146,10 @@ body {font-family: Verdana, sans-serif;}
     .weekdays li, .days li {width: 12.2%;}
 
 }
-</style>
-</head>
+    </style>
+  </head>
+  
 <body>
-
-
 
 <div class="month">      
   <ul>
@@ -169,10 +173,13 @@ body {font-family: Verdana, sans-serif;}
 
 <ul class="days">  
   <li>1
+  {!! Form::open(['route' => ['profiles.store', $user->id], 'method' => 'post']) !!}
   <select name="pref_id">
-  <option selected="selected" value=""> </option>
-    <value="701">HIMA</option>
+  <option  value=""> </option>
+    <option value="701">HIMA</option>
 　</select>
+　 {!! Form::submit('Upload', ['class' => "btn btn-danger btn-block"]) !!}
+　 {!! Form::close() !!}
   </li>
   <li>2
    <select name="pref_id">
@@ -327,13 +334,6 @@ body {font-family: Verdana, sans-serif;}
 </ul>
 <div style="margin-bottom:50px"></div>
 
-
-
-
-<!DOCTYPE html>
-<html>
-<head>
-
 <style>
 * {box-sizing: border-box;}
 ul {list-style-type: none;}
@@ -417,9 +417,6 @@ body {font-family: Verdana, sans-serif;}
     .weekdays li, .days li {width: 12.2%;}
 }
 </style>
-</head>
-<body>
-
 
 
 <div class="month">      
@@ -610,15 +607,15 @@ body {font-family: Verdana, sans-serif;}
 　</select></li>
 </ul>
 
-</body>
-</html>
-</body>
-</html>
-<div style="margin-bottom:100px"></div>
 
-<div class="button">
- <a href="{{route('profiles.store', ['id'=> Auth::User()->id] )}}"{!! Form::submit('Upload', ['class' => "btn btn-danger btn-block"]) !!}Upload</a>
-</div>
+
+<div style="margin-bottom:100px"></div>
+ 
+  <div class="button">
+        {!! Form::submit('Upload', ['class' => "btn btn-danger btn-block"]) !!}
+  </div>
+  
+  
 <style>
 .button {
     width:100px;
@@ -638,3 +635,5 @@ body {font-family: Verdana, sans-serif;}
 <div style="margin-top:100px"></div>
 @endsection
 
+</body>
+</html>

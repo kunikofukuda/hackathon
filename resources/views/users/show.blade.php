@@ -53,7 +53,9 @@
             margin-right: 20px;
         }
     </style>
-
+    <!DOCTYPE html>
+<html>
+<head>
 
 <style>
 * {box-sizing: border-box;}
@@ -142,7 +144,7 @@ body {font-family: Verdana, sans-serif;}
 </style>
 
 
- {!! Form::model($date, ['route' => ['profiles.store', $date->id], 'method' => 'post']) !!}
+
 
 <div class="month">      
   <ul>
@@ -614,8 +616,7 @@ body {font-family: Verdana, sans-serif;}
 <div style="margin-bottom:100px"></div>
 
 <div class="button">
- {!! Form::submit('Upload') !!}
-    {!! Form::close() !!}
+{!! Form::submit('Upload', ['class' => "btn btn-danger btn-block"]) !!}
 </div>
 <style>
 .button {
