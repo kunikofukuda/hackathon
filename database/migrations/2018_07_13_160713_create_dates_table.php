@@ -17,6 +17,7 @@ class CreateDatesTable extends Migration
             $table->increments('id');
             $table->integer('date_id');
             $table->integer('user_id');
+            $table->string('HIMA');
             $table->timestamps();
         });
     }

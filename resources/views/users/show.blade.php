@@ -5,10 +5,9 @@
         <aside class="col-xs-4">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title">{{ $user->name }}</h3>
+                    <h3 class="panel-title"></h3>
                 </div>
                 <div class="panel-body">
-                <img class="media-object img-rounded img-responsive" src="{{ Gravatar::src($user->email, 500) }}" alt="">
                 </div>
             </div>
             
@@ -168,26 +167,47 @@ body {font-family: Verdana, sans-serif;}
 
 <ul class="days">  
   <li>1
-  <select name="pref_id">
-  <option selected="selected" value=""> </option>
-    <option value="701">HIMA</option>
-　</select>
+   @if($value == 701)
+    
+     <p>HIMA</p>
+                              
+   @else
+     
+     <p>busy</p>
+   @endif
+ 
   </li>
   <li>2
-   <select name="pref_id">
-  <option selected="selected" value=""> </option>
-    <option value="702">HIMA</option>
-　</select></li>
+   @if($value == 702)
+    
+     <p>HIMA</p>
+                              
+   @else
+     
+     <p>busy</p>
+   @endif
+  </li>
+  
   <li>3
-   <select name="pref_id">
-  <option selected="selected" value=""> </option>
-    <option value="703">HIMA</option>
-　</select></li>
+    @if($value < 700)
+    
+     <p>HIMA</p>
+                              
+   @else
+     
+     <p>busy</p>
+   @endif
+   </li>
   <li>4
-   <select name="pref_id">
-  <option selected="selected" value=""> </option>
-    <option value="704">HIMA</option>
-　</select></li>
+    @if($value < 700)
+    
+     <p>HIMA</p>
+                              
+   @else
+     
+     <p>busy</p>
+   @endif
+   </li>
   <li>5
    <select name="pref_id">
   <option selected="selected" value=""> </option>

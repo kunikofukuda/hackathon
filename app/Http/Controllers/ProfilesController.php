@@ -8,30 +8,42 @@ use App\Http\Controllers\Controller;
 
 use App\Date;
 
+use DB;
+
 class ProfilesController extends Controller
 {
     public function store(Request $request)
     {
-     //print '<pre>';
-     // return print $request;
+    //  print '<pre>';
+    //  return print $request->date;
       // $this->validate($request, [
         //    'content' => 'required|max:191',
         //]);
         
-       $date = Date::find($request->id);
-       //$date->create();
-
-        $request->user()->dates()->create([
-           $date_id = $request->input('pref_id'),
+        Date::create([
+            'date_id'=> $request->date,
+            'user_id'=> $request->id,
+            'HIMA'=> $request->free,
+            ]);
+        
+// $calendars=DB::table('dates')->where('date_id', $request->date)->first();
+        
+       
+        // $data  =  $calendars->HIMA;  
             // 'date_id' => $request->pref_id,
-        ]);
-
-         return view('users.show', $data);
+    
+         return redirect('users/'.$request->id);
+        //  return redirect('users.show', ['value' => $data]);
     }
 
 
-     //public function show($id)
-    //{
+     public function show()
+    {
+        
+        $dates = Date::all();
+        $value =  $request->date;
+        return view('users.show');
+
       //  $user = User::find($id);
         //$dates = $user->dates()//->orderBy('created_at', 'desc')->paginate(10);
 
@@ -44,4 +56,5 @@ class ProfilesController extends Controller
 
       //  return view('users.show', $data);
     //}
+}
 }
