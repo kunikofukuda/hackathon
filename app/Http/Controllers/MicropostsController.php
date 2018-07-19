@@ -24,7 +24,10 @@ class MicropostsController extends Controller
                 'user' => $user,
                 'microposts' => $microposts,
             ];
-            $data += $this->counts($user);}
+            $data += $this->counts($user);
+            return view('toppage', $data);
+            
+        }
             
             return view('welcome', $data);
     }
@@ -53,4 +56,4 @@ class MicropostsController extends Controller
 
         return redirect()->back();
     }
-}    
+}

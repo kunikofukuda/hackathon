@@ -16,7 +16,7 @@
         <link rel="stylesheet" href="{{ secure_asset('css/style.css') }}">
         
     </head>
-    <body id='welcome'>
+    <body>
         @include('commons.navbar')
 
         <div class="container">

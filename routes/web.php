@@ -25,7 +25,8 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource('users', 'UsersController', ['only' => ['index', 'show','edit']]);
     Route::resource('microposts', 'MicropostsController', ['only' => ['store', 'destroy']]);
 
-//  Route::post('upload', 'ProfilesController@store')->name('profiles.store');
- Route::post('upload', 'ProfilesController@show')->name('profiles.show');
+// 
+ Route::post('upload', 'ProfilesController@store');
+ Route::get('upload', 'ProfilesController@show')->name('profiles.show');
 
 });
