@@ -14,6 +14,22 @@
                 <div class="panel-heading">Full Calendar Example</div>
 
                 <div class="panel-body">
+                     
+                      {!! Form::open(['route' => 'events.post']) !!}
+                <!--<div class="form-group">-->
+                    <!--{!! Form::label('title', 'Title') !!}-->
+                    <!--{!! Form::text('title', old('title'), ['class' => 'form-control']) !!}-->
+                <!--</div>-->
+
+                <div class="form-group">
+                    {!! Form::label('start_date', 'Date') !!}
+                    {!! Form::text('start_date', old('start_date'), ['class' => 'form-control']) !!}
+                <!--</div>-->
+
+                {!! Form::submit('Submit', ['class' => 'btn btn-primary btn-block']) !!}
+                </div>
+            {!! Form::close() !!}
+                </div>
                     {!! $calendar->calendar() !!}
                     {!! $calendar->script() !!}
                 </div>

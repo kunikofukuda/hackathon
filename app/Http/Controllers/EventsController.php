@@ -5,7 +5,7 @@ use Illuminate\Http\Request;
 use Calendar;
 use App\Event;
 
-class EventController extends Controller
+class EventsController extends Controller
 {
     public function index()
     {
@@ -32,6 +32,20 @@ class EventController extends Controller
         
         
         return view('fullcalender',['calendar'=>$calendar]);
+    }
+    public function store(Request $request)
+    {
+        $this->validate($request, [
+            
+            'start_date' => 'required',
+        ]);
+    
+        $event = new Event;
+            $event->title = 'HIMA'; 
+            $event->start_date = $request->start_date;
+            $event->end_date = $request->start_date;
+            $event->save();
+        return redirect ('/');
     }
     
    

@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('events', 'EventController@index')->name('calendar');
+Route::get('events', 'EventsController@index')->name('calendar');
 Route::get('/', 'MicropostsController@index');
 //Route::get('/', 'UsersController@index');
 Route::get('signup', 'Auth\RegisterController@showRegistrationForm')->name('signup.get');
@@ -24,10 +24,10 @@ Route::get('logout', 'Auth\LoginController@logout')->name('logout.get');
 Route::group(['middleware' => ['auth']], function () {
     Route::resource('users', 'UsersController', ['only' => ['index', 'show','edit']]);
     Route::resource('microposts', 'MicropostsController', ['only' => ['store', 'destroy']]);
-    
-
-
- Route::post('upload', 'ProfilesController@store');
- Route::get('upload', 'ProfilesController@show')->name('profiles.show');
+    //  Route::post('submit', 'EventsController@store')->name('events.post');
+//  Route::delete('destroy', 'EventsController@destroy')->name('events.destroy');
 
 });
+
+ Route::post('submit', 'EventsController@store')->name('events.post');
+ Route::delete('destroy', 'EventsController@destroy')->name('events.destroy');
