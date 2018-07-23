@@ -36,6 +36,12 @@
                     {!! Form::text('nickname', old('nickname'), ['class' => 'form-control']) !!}
                 </div>
                 
+                <!--<div class="form-group">-->
+                <!--    {!! Form::label('homegroup', 'homegroup') !!}-->
+                <!--    {!! Form::text('homegroup', old('homegroup'), ['class' => 'form-control']) !!}-->
+                <!--</div>-->
+                
+                
                 <div class="form-group">
                     {!! Form::label('email', 'Email') !!}
                     {!! Form::email('email', old('email'), ['class' => 'form-control']) !!}
@@ -51,6 +57,12 @@
                     {!! Form::label('password_confirmation', 'Confirmation') !!}
                     {!! Form::password('password_confirmation', ['class' => 'form-control']) !!}
                 </div>
+                
+                <!--<div class="form-group">-->
+                <!--    {!! Form::label('freeintro', 'freeintro') !!}-->
+                <!--    {!! Form::text('freeintro', old('freeintro'), ['class' => 'form-control']) !!}-->
+                <!--</div>-->
+                
 
                 {!! Form::submit('Sign up', ['class' => 'btn btn-primary btn-block']) !!}
             {!! Form::close() !!}

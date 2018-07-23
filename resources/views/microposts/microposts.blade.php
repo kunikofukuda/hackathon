@@ -1,7 +1,12 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>    
+    <body id=index-main>
 @if (Auth::user()->id == $user->id)
                   {!! Form::open(['route' => 'microposts.store']) !!}
-                      <div class="form-group">
-                          {!! Form::textarea('content', old('content'), ['class' => 'form-control', 'rows' => '5']) !!}
+                      <div class="form-group" >
+                          {!! Form::textarea('content', old('content'), ['class' => 'form-control', 'rows' => '5', 'placeholder'=>'暇だったらここに投稿！']) !!}
                           {!! Form::submit('Post', ['class' => 'btn btn-primary btn-block']) !!}
                       </div>
                   {!! Form::close() !!}
@@ -11,7 +16,7 @@
     <?php $user = $micropost->user; ?>
     <li class="media">
         <div class="media-left">
-            <img class="media-object img-circle" src="{{ Gravatar::src($user->email, 80) }}" alt="">
+            <img id="bob" class="center-block media-object img-circle" src="{{asset('img/boy.png')}}" alt="">
         </div>
         <div class="media-body">
             <div>
@@ -34,3 +39,5 @@
 @endforeach
 </ul>
 {!! $microposts->render() !!}
+</body>
+</html>

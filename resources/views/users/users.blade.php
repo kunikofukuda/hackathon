@@ -1,15 +1,18 @@
+<html>
+    <bodyid=users>
+
 @if (count($users) > 0)
 <ul class="media-list">
 @foreach ($users as $user)
     <li class="media">
         <div class="media-left">
-            <img class="media-object img-circle" src="{{ Gravatar::src($user->email, 80) }}" alt="">
+            <img id="boy" class="center-block media-object img-circle" src="{{asset('img/boy.png')}}" alt="">
         </div>
         <div class="media-body">
-            <div>
+            <div class="nickname">
                 {{ $user->nickname }}
             </div>
-            <div>
+            <div class="View-profile">
                 <p>{!! link_to_route('users.show', 'View profile', ['id' => $user->id]) !!}</p>
             </div>
         </div>
@@ -18,3 +21,6 @@
 </ul>
 {!! $users->render() !!}
 @endif
+
+</body>
+</html>

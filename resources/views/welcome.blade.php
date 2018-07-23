@@ -9,12 +9,16 @@
 
         <!-- Bootstrap -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         
         
-        <link rel="stylesheet" href="{{ secure_asset('css/style.css') }}">
         
+        <link rel="stylesheet" href="{{ secure_asset('css/style.css') }}">
+         <link rel="stylesheet" type="text/css" href="welcome.css">
+         <!--<link rel="stylesheet" href="animate.min.css">-->
+         
     </head>
     <body id='welcome'>
         @include('commons.navbar')
@@ -25,7 +29,7 @@
             
 
     @if (Auth::check())
-    <link rel="stylesheet" type="text/css" href="welcome.css">
+    
         <div class="row">
             <aside class="col-xs-4">
                 <div class="panel panel-default">
@@ -44,9 +48,10 @@
             </div>
         </div>
     @else
+    
         <div class="title">
             <!--<div class="text-center">-->
-                <p id="ym">Yotto Motto</p>
+       <p id="ym" class="animated zoomIn">Yotto Motto</p>
                 <!--{!! link_to_route('signup.get', 'Sign up now!', null, ['class' => 'btn btn-lg btn-primary']) !!}-->
             <!--</div>-->
          </div>

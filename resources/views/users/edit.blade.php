@@ -4,6 +4,7 @@
 
  <!DOCTYPE html>
 <html>
+<body id=edit-main>
 
         <aside class="col-xs-4">
             <div class="panel panel-default">
@@ -11,7 +12,7 @@
                     <h3 class="panel-title">{{ $user->nickname }}</h3>
                 </div>
                 <div class="panel-body">
-                <img class="media-object img-rounded img-responsive" src="{{ Gravatar::src($user->email, 500) }}" alt="">
+                <img class="center-block media-object img-rounded img-responsive" src="{{asset('img/boy.png')}}" alt="">
                 </div>
             </div>
             
@@ -100,13 +101,13 @@ body {font-family: Verdana, sans-serif;}
 .weekdays {
     margin: 0;
     padding: 10px 0;
-    background-color: #ddd;
+    background-color: #f3ddaf;
 }
 
 .weekdays li {
     display: inline-block;
     width: 13.6%;
-    color: #666;
+    color: #f3ddaf;
     text-align: center;
 }
 
@@ -154,9 +155,9 @@ body {font-family: Verdana, sans-serif;}
 <div class="month">      
   <ul>
 
-    <li>
-      July<br>
-      <span style="font-size:18px">2018</span>
+    <li class"month-text">
+      <span style="font-size:30px">July</span><br>
+      <span style="font-size:20px">2018</span>
     </li>
   </ul>
 </div>
@@ -350,7 +351,7 @@ body {font-family: Verdana, sans-serif;}
 .month {
     padding: 70px 25px;
     width: 100%;
-    background: #1abc9c;
+    background: #efcc7cd1;
     text-align: center;
 }
 
@@ -431,8 +432,9 @@ body {font-family: Verdana, sans-serif;}
   <ul>
   
     <li>
-      August<br>
-      <span style="font-size:18px">2018</span>
+      <span style="font-size:30px">August</span><br>
+      <span style="font-size:20px">2018</span>
+    </li>
     </li>
   </ul>
 </div>
@@ -632,16 +634,10 @@ body {font-family: Verdana, sans-serif;}
     }
     
 </style>
-<footer>
-© 卍Olive卍
-</footer>
-<style>
-.footer {
-    clear: both;
-}
-</style>
+
 <div style="margin-top:100px"></div>
 @endsection
 
+</body>
 </body>
 </html>

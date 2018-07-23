@@ -30,6 +30,8 @@
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
 
+<!--ログインから引っ張て来たやつ-->
+
             {!! Form::open(['route' => 'login.post']) !!}
                 <div class="form-group">
                     {!! Form::label('nickname', 'Nickname') !!}
@@ -43,7 +45,7 @@
 
                 {!! Form::submit('Log in', ['class' => 'btn btn-primary btn-block']) !!}
             {!! Form::close() !!}
-
+            <a href="{{route('calendar')}}">カレンダー</a>
             <!--<p>New user? {!! link_to_route('signup.get', 'Sign up now!') !!}</p>-->
         </div>
     </div>
