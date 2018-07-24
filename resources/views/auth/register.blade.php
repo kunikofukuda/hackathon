@@ -38,17 +38,17 @@
                 
                 <div class="form-group">
                     {!! Form::label('favoritedrink', 'Favorite Drink') !!}
-                    {!! Form::text('favoritedrink', old('favoritedrink'), ['class' => 'form-control']) !!}
+                    {!! Form::text('favoritedrink', old('favoritedrink'), ['class' => 'form-control','placeholder'=>'ex) Beer']) !!}
                 </div>
                 
                  <div class="form-group">
-                    {!! Form::label('wheredoyouusuallydrink', 'Where Do You Usually Drink') !!}
-                    {!! Form::text('wheredoyouusuallydrink', old('wheredoyouusuallydrink'), ['class' => 'form-control']) !!}
+                    {!! Form::label('wheredoyouusuallydrink', 'Favorite Place to Drink') !!}
+                    {!! Form::text('wheredoyouusuallydrink', old('wheredoyouusuallydrink'), ['class' => 'form-control','placeholder'=>'ex) Shibuya']) !!}
                 </div>
                 
                  <div class="form-group">
                     {!! Form::label('freeintro', 'freeintro') !!}
-                    {!! Form::text('freeintro', old('freeintro'), ['class' => 'form-control']) !!}
+                    {!! Form::text('freeintro', old('freeintro'), ['class' => 'form-control','placeholder'=>'ex) Lets go drinking together!']) !!}
                 </div>
                 
 

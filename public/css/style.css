@@ -170,10 +170,45 @@ fieldset[disabled] .btn-primary.active {
     background-size:cover;
 }
 
-.self-intro{
+.self-intro h1{
      color: white;
     font-family: 'Caveat', cursive;
+    font-size:30px;
 }
+
+.self-intro h2{
+     color: white;
+    font-family: 'Caveat', cursive;
+    font-size:25px;
+    
+}
+
+.self-intro h3{
+     color: white;
+    font-family: 'Caveat', cursive;
+    font-size:30px;
+}
+
+.self-intro h4{
+     color: white;
+    font-family: 'Caveat', cursive;
+    font-size:25px;
+   
+}
+
+.self-intro h5{
+     color: white;
+    font-family: 'Caveat', cursive;
+    font-size:30px;
+}
+
+.self-intro h6{
+     color: white;
+    font-family: 'Caveat', cursive;
+    font-size:25px;
+ 
+}
+
 
 .media-list a{
     color: white;
@@ -283,3 +318,4 @@ img#bob{
     font-family: 'Homemade Apple', fantasy;
     text-align: center;
 }
+

@@ -31,12 +31,15 @@
         
         
          <div class="self-intro">
-
-       <li> {{ $user->favoritedrink }}</li>
-       <li> {{ $user->wheredoyouusuallydrink }}</li>
-       <li>{{ $user->freeintro }}</li>
+       <h1>< Favorite Drink ><h1>       
+       <h2>・{{ $user->favoritedrink }}</h2>
+       <h3>< Favorite Place to Drink ></h3>
+       <h4>・{{ $user->wheredoyouusuallydrink }}</h4>
+       <h5>< Free Intro ></h5> 
+       <h6>・{{ $user->freeintro }}</h6>
               
         </div>
+            
             
           
             
