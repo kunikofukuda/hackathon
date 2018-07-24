@@ -42,10 +42,13 @@ class EventsController extends Controller
     
         $event = new Event;
             $event->title = 'HIMA'; 
+            $event->user_id = \Auth::user()->id;
             $event->start_date = $request->start_date;
             $event->end_date = $request->start_date;
             $event->save();
-        return redirect ('/');
+        // return redirect ('/');
+       return redirect()->back();
+        
     }
     
    

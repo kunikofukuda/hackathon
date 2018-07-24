@@ -36,10 +36,20 @@
                     {!! Form::text('nickname', old('nickname'), ['class' => 'form-control']) !!}
                 </div>
                 
-                <!--<div class="form-group">-->
-                <!--    {!! Form::label('homegroup', 'homegroup') !!}-->
-                <!--    {!! Form::text('homegroup', old('homegroup'), ['class' => 'form-control']) !!}-->
-                <!--</div>-->
+                <div class="form-group">
+                    {!! Form::label('favoritedrink', 'Favorite Drink') !!}
+                    {!! Form::text('favoritedrink', old('favoritedrink'), ['class' => 'form-control']) !!}
+                </div>
+                
+                 <div class="form-group">
+                    {!! Form::label('wheredoyouusuallydrink', 'Where Do You Usually Drink') !!}
+                    {!! Form::text('wheredoyouusuallydrink', old('wheredoyouusuallydrink'), ['class' => 'form-control']) !!}
+                </div>
+                
+                 <div class="form-group">
+                    {!! Form::label('freeintro', 'freeintro') !!}
+                    {!! Form::text('freeintro', old('freeintro'), ['class' => 'form-control']) !!}
+                </div>
                 
                 
                 <div class="form-group">
@@ -58,11 +68,7 @@
                     {!! Form::password('password_confirmation', ['class' => 'form-control']) !!}
                 </div>
                 
-                <!--<div class="form-group">-->
-                <!--    {!! Form::label('freeintro', 'freeintro') !!}-->
-                <!--    {!! Form::text('freeintro', old('freeintro'), ['class' => 'form-control']) !!}-->
-                <!--</div>-->
-                
+            
 
                 {!! Form::submit('Sign up', ['class' => 'btn btn-primary btn-block']) !!}
             {!! Form::close() !!}

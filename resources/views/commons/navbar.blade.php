@@ -24,9 +24,9 @@
                             <a href="/" class="glyphicon glyphicon-list" style='font-size:22pt; margin-left: 15px; margin-top: 10px; color: white;'></a>
                         </span>
                         
-                        <span>
-                            <a href="{{route('users.show', ['id'=> Auth::User()->id] )}}" class="glyphicon glyphicon-home" style='font-size:24pt; margin-left: 15px; margin-top: 10px; color: white;'></a>
-                        </span>
+                        <!--<span>-->
+                            <!--<a href="{{route('users.show', ['id'=> Auth::User()->id] )}}" class="glyphicon glyphicon-home" style='font-size:24pt; margin-left: 15px; margin-top: 10px; color: white;'></a>-->
+                        <!--</span>-->
                        
                       
                         
