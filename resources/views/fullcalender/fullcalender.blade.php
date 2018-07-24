@@ -16,7 +16,7 @@
 
                 <div class="form-group">
                     {!! Form::label('start_date', 'Date') !!}
-                    {!! Form::text('start_date', old('start_date'), ['class' => 'form-control']) !!}
+                    {!! Form::text('start_date', old('start_date'), ['class' => 'form-control','placeholder'=>'ex) 2018-07-01']) !!}
                 <!--</div>-->
 
                 {!! Form::submit('Submit', ['class' => 'btn btn-primary btn-block']) !!}

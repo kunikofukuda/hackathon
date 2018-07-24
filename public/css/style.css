@@ -40,6 +40,10 @@ background-color: white;
     border-color:transparent;
 }
 
+.navbar-brand{
+     font-size:30px;
+}
+
 .navbar-brand a {
         color: #9d9d9d;
         text-decoration:none;
@@ -272,4 +276,10 @@ img#bob{
 
 .row{
     padding-left: 0px;
+}
+
+.panel-default>.panel-heading{
+    color:white;
+    font-family: 'Homemade Apple', fantasy;
+    text-align: center;
 }

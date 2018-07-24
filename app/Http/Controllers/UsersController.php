@@ -83,7 +83,8 @@ class UsersController extends Controller
         $microposts = $user->microposts()->orderBy('created_at', 'desc')->paginate(10);
         // $calendar=Event::all();
         $events = [];
-        $data = Event::all();
+        // $data = Event::all();
+        $data = Event::where('user_id', $id)->get();
         if($data->count()) {
             foreach ($data as $key => $value) {
                 $events[] = Calendar::event(

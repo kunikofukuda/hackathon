@@ -31,13 +31,10 @@
         
         
          <div class="self-intro">
-             
-                 <!--<p>Nickname:</p> <input type="text" size="40" name="text1" > -->
-                  <p>Favorite Drink:</p> <input type="text" size="40" name="text2" > 
-                  <p>Where do you usually drink:</p> <input type="text" size="40" name="tex3" >
-                  <!--<p>What do you usually do on weekends</p><input type="text" size="40" name="text4" >-->
-                  <!--<p>Hobby</p><input type="text" size="40" name="text5" >-->
-                  <p>Free Intro</p><input type="text" size="40×100" name="text6"  >
+
+       <li> {{ $user->favoritedrink }}</li>
+       <li> {{ $user->wheredoyouusuallydrink }}</li>
+       <li>{{ $user->freeintro }}</li>
               
         </div>
             
@@ -56,6 +53,10 @@
         .kuniko{
         display:none;
     }
+        .fc-event.fc-draggable, .fc-event[href]{
+            pointer-events: none;
+            
+        }
         </style>
         
        <div class=container4>

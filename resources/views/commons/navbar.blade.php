@@ -8,7 +8,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                 <div class="navbar-brand">{!! link_to_route('users.index', 'Yotto Motto') !!}</div> 
+                 <div class="navbar-brand">Yotto Motto</div> 
 
 
             </div>
@@ -24,16 +24,16 @@
                             <a href="/" class="glyphicon glyphicon-list" style='font-size:22pt; margin-left: 15px; margin-top: 10px; color: white;'></a>
                         </span>
                         
-                        <!--<span>-->
-                            <!--<a href="{{route('users.show', ['id'=> Auth::User()->id] )}}" class="glyphicon glyphicon-home" style='font-size:24pt; margin-left: 15px; margin-top: 10px; color: white;'></a>-->
-                        <!--</span>-->
+                        <span>
+                            <a href="{{route('users.index', ['id'=> Auth::User()->id] )}}" class="glyphicon glyphicon-search" style='font-size:24pt; margin-left: 15px; margin-top: 10px; color: white;'></a>
+                        </span>
                        
                       
                         
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ Auth::user()->nickname }} <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li role="separator" class="divider"></li>
+                                
                                 <li>{!! link_to_route('logout.get', 'Logout') !!}</li>
                             </ul>
                             
