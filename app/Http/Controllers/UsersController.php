@@ -80,7 +80,7 @@ class UsersController extends Controller
     public function edit($id)
     {
         $user = User::find($id);
-        $microposts = $user->microposts()->orderBy('created_at', 'desc')->paginate(10);
+        $microposts = $user->microposts()->orderBy('created_at', 'desc')->paginate(20);
         // $calendar=Event::all();
         $events = [];
         // $data = Event::all();
@@ -96,7 +96,7 @@ class UsersController extends Controller
                     // Add color and link on event
 	                [
 	                    'color' => '#f05050',
-	                    'url' => 'pass here url and any route',
+	                    'url' => '/events/destroy/'.$value->id,
 	                ]
                 );
             }

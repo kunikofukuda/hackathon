@@ -26,8 +26,8 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource('microposts', 'MicropostsController', ['only' => ['store', 'destroy']]);
     //  Route::post('submit', 'EventsController@store')->name('events.post');
 //  Route::delete('destroy', 'EventsController@destroy')->name('events.destroy');
-
+Route::get('events/destroy/{id}', 'EventsController@destroy')->name('events.destroy');
 });
 
  Route::post('submit', 'EventsController@store')->name('events.post');
- Route::delete('destroy', 'EventsController@destroy')->name('events.destroy');
+ 

@@ -18,8 +18,9 @@
                     {!! Form::label('start_date', 'Date') !!}
                     {!! Form::text('start_date', old('start_date'), ['class' => 'form-control','placeholder'=>'ex) 2018-07-01']) !!}
                 <!--</div>-->
-
+                   
                 {!! Form::submit('Submit', ['class' => 'btn btn-primary btn-block']) !!}
+                <p class="delete">&#x26a0;You can delete "HIMA" by pressing them</p>
                 </div>
             {!! Form::close() !!}
                 </div>

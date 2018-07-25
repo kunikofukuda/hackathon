@@ -8,7 +8,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                 <div class="navbar-brand">Yotto Motto</div> 
+                <a class="navbar-brand" href="/" >Yotto Motto</a>
 
 
             </div>

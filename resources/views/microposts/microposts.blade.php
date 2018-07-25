@@ -6,7 +6,7 @@
 @if (Auth::user()->id == $user->id)
                   {!! Form::open(['route' => 'microposts.store']) !!}
                       <div class="form-group" >
-                          {!! Form::textarea('content', old('content'), ['class' => 'form-control', 'rows' => '5', 'placeholder'=>'暇だったらここに投稿！']) !!}
+                          {!! Form::textarea('content', old('content'), ['class' => 'form-control', 'rows' => '5', 'placeholder'=>'Whats new?']) !!}
                           {!! Form::submit('Post', ['class' => 'btn btn-primary btn-block']) !!}
                       </div>
                   {!! Form::close() !!}

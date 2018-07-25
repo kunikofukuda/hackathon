@@ -51,5 +51,13 @@ class EventsController extends Controller
         
     }
     
-   
+    public function destroy($id)
+    {
+        $event = Event::find($id);
+        if (\Auth::user()->id === $event->user_id){
+            $event->delete();
+        }
+         return redirect()->back();    }
 }
+    
+   
