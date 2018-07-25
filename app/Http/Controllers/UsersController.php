@@ -31,7 +31,7 @@ class UsersController extends Controller
             //];
             //$data += $this->counts($user);
             //return view('users.index', $data);
-            $users = User::paginate(30);
+            $users = User::paginate(32);
         
         return view('users.index', [
             'users' => $users,
