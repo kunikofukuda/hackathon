@@ -80,7 +80,7 @@ class UsersController extends Controller
     public function edit($id)
     {
         $user = User::find($id);
-        $microposts = $user->microposts()->orderBy('created_at', 'desc')->paginate(20);
+        $microposts = $user->microposts()->orderBy('created_at', 'desc')->paginate(40);
         // $calendar=Event::all();
         $events = [];
         // $data = Event::all();

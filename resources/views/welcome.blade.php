@@ -57,8 +57,8 @@
          </div>
          
          <div class="mission">
-             <p id="mi">From "maybe" To "WILL" go to have some drinks</p>
-             <p id="mi">So let's start your journey to find your doukis☺</p>
+             <p id="mi">Say Good Bye to your awkward Doukis!</p>
+             <p id="mi">Let's get closer with them and grab some drinks☺</p>
         </div>
 @endif
 </div>
